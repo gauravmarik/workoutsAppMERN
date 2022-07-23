@@ -4,11 +4,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
 
-const port = process.env.PORT || 8003;
+// const port = process.env.PORT || 8003;
 
-app.get('/', (req, res) => {
-	res.json('server start');
-});
+// app.get('/', (req, res) => {
+// 	res.json('server start');
+// });
 
 function App() {
 	return (
