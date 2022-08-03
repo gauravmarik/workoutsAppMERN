@@ -8,21 +8,19 @@ const userRoutes = require('./routes/user');
 // express app
 const app = express();
 
-// middleware
 app.use(express.json());
 
 app.use((req, res, next) => {
 	console.log(req.path, req.method);
 	next();
 });
-
 // routes
 app.use('/api/workouts', workoutRoutes);
 app.use('/api/user', userRoutes);
 
-// app.get('/', (req, res) => {
-// 	res.json({ mssg: 'Welcome to app' });
-// });
+app.get('/', (req, res) => {
+	res.json({ mssg: 'Welcome to the app' });
+});
 
 // connect to db
 mongoose
