@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-// pages & components
+// 0. pages & components
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
 
@@ -14,6 +14,7 @@ function App() {
 	return (
 		<div className="App">
 			<BrowserRouter>
+				{/* 1. put navbar outside the 'pages' component but inside the 'BrowserRouter', otherwise we can't use the 'Link' component. Cuz everything to do with a router needs to be inside 'BrowserRouter'  */}
 				<Navbar />
 				<div className="pages">
 					<Routes>
