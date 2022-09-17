@@ -61,7 +61,7 @@ const deleteWorkout = async (req, res) => {
 	if (!mongoose.Types.ObjectId.isValid(id)) {
 		return res.status(404).json({ error: 'No such workout' });
 	}
-	// 17sep
+	// 17sep22..
 	const workout = await Workout.findOneAndDelete({ _id: id });
 
 	if (!workout) {
