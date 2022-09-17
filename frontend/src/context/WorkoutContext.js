@@ -25,8 +25,6 @@ export const WorkoutContextProvider = ({ children }) => {
 		workouts: null,
 	});
 
-	// dispatch({type:'SET_WORKOUTS', payload:[{}, {}]})
-
 	return (
 		<WorkoutContext.Provider value={{ ...state, dispatch }}>
 			{children}
